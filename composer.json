@@ -10,11 +10,8 @@
     },
     "scripts": {
         "post-create-project-cmd": [],
-        "post-install-cmd": [
-            "php -r \"copy('app/Jobs/SampleJob.php', 'app/Jobs/SampleJob.php');\""
-        ],
-        "post-update-cmd": [
-            "php -r \"copy('app/Jobs/SampleJob.php', 'app/Jobs/SampleJob.php');\""
+        "post-root-package-install": [
+            "@php -r \"copy('app/Jobs/SampleJob.php', 'app/Jobs/SampleJob.php');\""
         ]
     },
     "extra": {
