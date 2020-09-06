@@ -6,7 +6,7 @@ This package is hosted on github only right now as a public repo
 
 First, include the package in your dependencies in your **composer.json** file:
 ```
-"movieenglish/amazon-sqs-job": "master"
+"fire-queue/amazon-sqs-job": "master"
 ```
 Then add the github link for the respective repo in the **composer.json** file:
 ```
@@ -23,7 +23,7 @@ Running the above command will print something like this:
 ![Screenshot](https://github.com/shujahm/video-indexing/blob/master/documents/Screenshot_4.png?raw=true)
 
 From the above we select the number 9 that is against 
-> **MovieEnglish\AmazonSqsJob\AmazonSqsJobServiceProvider**
+> **FireQueue\AmazonSqsJob\AmazonSqsJobServiceProvider**
 
 What this will essentially is migrate copy the file **SampleJob.php** file to your the **App/Jobs** folder of your project. Thus make sure App/Jobs folder is already there for this file to successfully move from package to your project.
 
