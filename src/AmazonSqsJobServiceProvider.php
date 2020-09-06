@@ -14,8 +14,9 @@ class AmazonSqsJobServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/queue.php','queue'
-       );
+            __DIR__ . '/config/queue.php',
+            'queue'
+        );
     }
 
     /**
@@ -25,6 +26,8 @@ class AmazonSqsJobServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__ . '/app/Jobs' => base_path('/app/Jobs'),
+        ]);
     }
 }
