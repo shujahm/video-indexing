@@ -10,7 +10,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
 use ShiftOneLabs\LaravelSqsFifoQueue\Bus\SqsFifoQueueable;
 
-class SampleJob implements ShouldQueue
+class SampleJob1 implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels, SqsFifoQueueable;
 
@@ -25,7 +25,7 @@ class SampleJob implements ShouldQueue
     public function __construct()
     {
         // all the initializtion can happen here
-        Log::info("intiating SampleJob Job");
+        Log::info("intiating SampleJob1 Job");
     }
 
     /**
@@ -36,6 +36,7 @@ class SampleJob implements ShouldQueue
     public function handle()
     {
         // code for processing
-        Log::info("processing SampleJob Job");
+        Log::info("processing SampleJob2 Job");
+        SampleJob2::dispatch([12, 1212, 32, 43, 56, 7678]);
     }
 }
