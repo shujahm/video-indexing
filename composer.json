@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MovieEnglish\\AmazonSqsJob\\": "src/"
+            "MovieEnglish\\AmazonSqsJob\\": "src/app"
         }
     },
     "license": "MIT",
