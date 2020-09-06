@@ -1,6 +1,6 @@
 # Laravel Amazon SQS Job
 
-This package is hosted on github only right now as a public repo
+This package is hosted on github only right now, as a public repo
 
 ## Installation
 
