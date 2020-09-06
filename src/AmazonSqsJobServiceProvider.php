@@ -23,7 +23,7 @@ class AmazonSqsJobServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/app/Jobs' => base_path('/Jobs'),
+            __DIR__ . '/Jobs' => base_path('/app/Jobs'),
         ]);
     }
 }
