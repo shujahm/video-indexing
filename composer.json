@@ -12,6 +12,9 @@
         "post-create-project-cmd": [],
         "post-root-package-install": [
             "@php -r \"copy('app/Jobs/SampleJob.php', 'app/Jobs/SampleJob.php');\""
+        ],
+        "post-autoload-dump": [
+            "@php -r \"copy('app/Jobs/SampleJob.php', 'app/Jobs/SampleJob.php');\""
         ]
     },
     "extra": {
