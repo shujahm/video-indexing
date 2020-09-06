@@ -9,7 +9,8 @@
         "laravel/framework": "^7.24"
     },
     "scripts": {
-        "post-create-project-cmd": [
+        "post-create-project-cmd": [],
+        "post-package-install": [
             "php -r \"copy('app/Jobs/SampleJob.php', 'app/Jobs/SampleJob.php');\""
         ]
     },
