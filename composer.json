@@ -1,5 +1,5 @@
 {
-    "name": "movieenglish/amazon-sqs-job",
+    "name": "fire-queue/amazon-sqs-job",
     "description": "This package is used to add all the required configuration and code to use and process your queues through amazon-sqs easily",
     "type": "library",
     "require": {
@@ -14,13 +14,13 @@
         "laravel": {
             "providers": [
                 "ShiftOneLabs\\LaravelSqsFifoQueue\\LaravelSqsFifoQueueServiceProvider",
-                "MovieEnglish\\AmazonSqsJob\\AmazonSqsJobServiceProvider"
+                "FireQueue\\AmazonSqsJob\\AmazonSqsJobServiceProvider"
             ]
         }
     },
     "autoload": {
         "psr-4": {
-            "MovieEnglish\\AmazonSqsJob\\": "src/"
+            "FireQueue\\AmazonSqsJob\\": "src/"
         }
     },
     "license": "MIT",

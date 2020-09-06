@@ -1,6 +1,6 @@
 <?php
 
-namespace MovieEnglish\AmazonSqsJob;
+namespace FireQueue\AmazonSqsJob;
 
 use Illuminate\Support\ServiceProvider;
 
