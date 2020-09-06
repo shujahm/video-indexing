@@ -14,7 +14,7 @@ Run the following command to bring the sample job file from package to the **App
 php artisan vendor:publish
 ```
 Running the above command will print something like this:
-![Screenshot](https://github.com/shujahm/video-indexing/blob/master/documents/Screenshot_4.png?raw=true)
+![Screenshot](https://github.com/shujahm/video-indexing/blob/master/documents/Screenshot.png?raw=true)
 
 From the above we select the number 9 that is against 
 > **FireQueue\AmazonSqsJob\AmazonSqsJobServiceProvider**
