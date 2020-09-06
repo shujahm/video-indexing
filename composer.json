@@ -9,24 +9,19 @@
         "laravel/framework": "^7.24"
     },
     "scripts": {
-        "post-create-project-cmd": [],
-        "post-root-package-install": [
-            "@php -r \"copy('app/Jobs/SampleJob.php', 'app/Jobs/SampleJob.php');\""
-        ],
-        "post-autoload-dump": [
-            "@php -r \"copy('app/Jobs/SampleJob.php', 'app/Jobs/SampleJob.php');\""
-        ]
+        "post-create-project-cmd": []
     },
     "extra": {
         "laravel": {
             "providers": [
-                "ShiftOneLabs\\LaravelSqsFifoQueue\\LaravelSqsFifoQueueServiceProvider"
+                "ShiftOneLabs\\LaravelSqsFifoQueue\\LaravelSqsFifoQueueServiceProvider",
+                "MovieEnglish\\AmazonSqsJob\\AmazonSqsJobServiceProvider"
             ]
         }
     },
     "autoload": {
         "psr-4": {
-            "MovieEnglish\\AmazonSqsJob\\": "src"
+            "MovieEnglish\\AmazonSqsJob\\": "src/"
         }
     },
     "license": "MIT",
