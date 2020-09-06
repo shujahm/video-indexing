@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ShiftOneLabs\\LaravelSqsFifoQueue\\LaravelSqsFifoQueueServiceProvider"
+                "MovieEnglish\\AmazonSqsJob\\AmazonSqsJobServiceProvider"
             ]
         }
     },
