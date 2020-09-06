@@ -1,7 +1,7 @@
 {
     "name": "movieenglish/amazon-sqs-job",
     "description": "This package is used to add all the required configuration and code to use and process your queues through amazon-sqs easily",
-    "type": "package",
+    "type": "library",
     "require": {
         "aws/aws-sdk-php": "3.1",
         "shiftonelabs/laravel-sqs-fifo-queue": "2.0",
@@ -20,7 +20,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MovieEnglish\\AmazonSqsJob\\AmazonSqsJobServiceProvider"
+                "ShiftOneLabs\\LaravelSqsFifoQueue\\LaravelSqsFifoQueueServiceProvider"
             ]
         }
     },
