@@ -6,15 +6,9 @@ This package is hosted on github only right now, as a public repo
 
 First, include the package in your dependencies in your **composer.json** file:
 ```
-"fire-queue/amazon-sqs-job": "master"
+composer require fire-queue/amazon-sqs-job
 ```
-Then add the github link for the respective repo in the **composer.json** file:
-```
-"repositories": [{
-  "type": "vcs",
-  "url": "https://github.com/shujahm/video-indexing.git"
-}],
-```
+
 Run the following command to bring the sample job file from package to the **App/Jobs** folder of your project
 ```
 php artisan vendor:publish
@@ -33,8 +27,8 @@ What this will essentially is migrate copy the file **SampleJob.php** file to yo
 
 	```
 	QUEUE_CONNECTION=sqs-fifo
-	SQS_KEY=AKIAXEJ5RN71212433454657UU4CHSN6V1212
-	SQS_SECRET=ylaT23232323212121343430hHQYEsU9VyUF7Qkad8VXqzxSQkAdVcR8hK6
+	SQS_KEY=AKIA21212wsxbuXEJ5RN71212342fvcds12433454657UU4CHSN6V1212
+	SQS_SECRET=y34380laT23232323212121343430hHQYEsU9VyUF7Qkad8VXqzx-0SQkAdVcR8hK6
 	SQS_QUEUE=IndexingVideo.fifo
 	SQS_REGION=us-east-2
 	SQS_PREFIX=https://sqs.us-east-2.amazonaws.com/<quie-id>
