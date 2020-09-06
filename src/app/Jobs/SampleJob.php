@@ -1,6 +1,6 @@
 <?php
 
-namespace MovieEnglish\AmazonSqsJob\Jobs;
+namespace MovieEnglish\AmazonSqsJob\App\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
