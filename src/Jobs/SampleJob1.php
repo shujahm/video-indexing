@@ -37,6 +37,7 @@ class SampleJob1 implements ShouldQueue
     {
         // code for processing
         Log::info("processing SampleJob2 Job");
+        // this is how you can pass an array of Video IDs
         SampleJob2::dispatch([12, 1212, 32, 43, 56, 7678]);
     }
 }

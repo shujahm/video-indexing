@@ -1,29 +1,57 @@
+
 # Laravel Amazon SQS Job
+
+  
 
 This package is hosted on github only right now, as a public repo
 
+  
+
 ## Installation
 
+  
+
 First, include the package in your dependencies in your **composer.json** file:
+
 ```
+
 composer require fire-queue/amazon-sqs-job
+
 ```
+
+  
 
 Run the following command to bring the sample job file from package to the **App/Jobs** folder of your project
+
 ```
+
 php artisan vendor:publish
+
 ```
+
 Running the above command will print something like this:
+
 ![Screenshot](https://github.com/shujahm/video-indexing/blob/master/documents/Screenshot.png?raw=true)
 
-From the above we select the number 9 that is against 
+  
+
+From the above we select the number 9 that is against
+
 > **FireQueue\AmazonSqsJob\AmazonSqsJobServiceProvider**
+
+  
 
 What this will essentially is migrate copy the file **SampleJob.php** file to your the **App/Jobs** folder of your project. Thus make sure App/Jobs folder is already there for this file to successfully move from package to your project.
 
+  
+
 ## Configuration
 
- 1. Add the following variables to your **.env** file. This are just **sample** key:values , please update them as per your configuration
+  
+
+1. Add the following variables to your **.env** file. This are just **sample** key:values , please update them as per your configuration
+
+  
 
 	```
 	QUEUE_CONNECTION=sqs-fifo
@@ -34,17 +62,26 @@ What this will essentially is migrate copy the file **SampleJob.php** file to yo
 	SQS_PREFIX=https://sqs.us-east-2.amazonaws.com/<quie-id>
 	```
 
- 2. Add the following to your **app/queue.php** under **connections** array:
+  
+
+2. Add the following to your **app/queue.php** under **connections** array:
+
 	```
-	'sqs-fifo'  => [
-		'driver'  =>  'sqs-fifo',
-		'key'  =>  env('AWS_ACCESS_KEY_ID'),
-		'secret'  =>  env('AWS_SECRET_ACCESS_KEY'),
-		'prefix'  =>  env('SQS_PREFIX', 'https://sqs.amazonaws.com/your-account-id'),
-		'queue'  =>  env('SQS_QUEUE', 'your-queue-name'),
-		'suffix'  =>  env('SQS_SUFFIX'),
-		'region'  =>  env('AWS_DEFAULT_REGION', 'us-east-1'),
-		'group'  =>  'default',
-		'deduplicator'  =>  'unique'
+	'sqs-fifo' => [
+	'driver' => 'sqs-fifo',
+	'key' => env('AWS_ACCESS_KEY_ID'),
+	'secret' => env('AWS_SECRET_ACCESS_KEY'),
+	'prefix' => env('SQS_PREFIX', 'https://sqs.amazonaws.com/your-account-id'),
+	'queue' => env('SQS_QUEUE', 'your-queue-name'),
+	'suffix' => env('SQS_SUFFIX'),
+	'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+	'group' => 'default',
+	'deduplicator' => 'unique'
 	]
 	```
+
+  
+
+## Heroku Worker Setup
+
+The above setup with Amazon SQS provides us the queue driver we need, we just need to setup queue workers on Heroku to process and use the Amazon SQS through laravel. A very short and precise info is shared on this link: https://dev.to/densityx/setting-up-laravel-queue-worker-on-heroku-4m00
