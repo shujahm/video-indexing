@@ -64,7 +64,7 @@ What this will essentially is migrate copy the file **SampleJob.php** file to yo
 
   
 
-2. Add the following to your **app/queue.php** under **connections** array:
+2. Add the following to your **config/queue.php** under **connections** array:
 
 	```
 	'sqs-fifo' => [
