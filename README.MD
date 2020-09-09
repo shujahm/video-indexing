@@ -94,11 +94,11 @@ This will restart and put the queue to work whenever your application starts.
 To scale up heroku , and use more than 1 worker,  you have to use the following command:
 
     heroku ps:scale web=1 worker=5
-In this way 1 Web Dyno and 5 Worker Dynos will be deployed. Also please note if you are using Free tier on Heroku running this command will give the following error
+In this way 1 Web Dyno and 5 Worker Dynos will be deployed. Also please note if you are using Free or hobby tier on Heroku running this command will give the following error
 
 > Cannot update to more than 1 Free size dynos per process type.
 
-So you have to upgrade to at least hobby version.
+So you have to upgrade to above free and hobby tier.
 
 You can use the following command to see worker logs:
 
