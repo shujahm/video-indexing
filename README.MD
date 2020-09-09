@@ -1,4 +1,5 @@
 
+
 # Laravel Amazon SQS Job
 
   
@@ -107,3 +108,15 @@ You can use the following command to see worker logs:
 this will print all the logs of the worker as shown below in the screenshot
 
 ![enter image description here](https://github.com/shujahm/video-indexing/blob/master/documents/Screenshot1.png?raw=true)
+
+To kill or downscale the workers you have to run the following:
+
+    heroku ps:scale web=1 worker=0
+
+in this way all the workers will be shutdown and after that you can scale back to any number of workers by running old command of 
+
+    heroku ps:scale web=1 worker=5
+
+Also note , when you change your code in the JOB file, you need to follow the above process again as workers cache the code in each of the JOB files it runs. so its required to kill/destroy them and deploy new workers instead which will take up the new version of the code file.
+
+
