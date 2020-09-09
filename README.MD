@@ -91,7 +91,7 @@ This will restart and put the queue to work whenever your application starts.
 
 ## Heroku Worker Configuration
 
-To scale up heroku , and user more than 1 worker,  you have to use the following command:
+To scale up heroku , and use more than 1 worker,  you have to use the following command:
 
     heroku ps:scale web=1 worker=5
 In this way 1 Web Dyno and 5 Worker Dynos will be deployed. Also please note if you are using Free tier on Heroku running this command will give the following error
@@ -100,10 +100,10 @@ In this way 1 Web Dyno and 5 Worker Dynos will be deployed. Also please note if 
 
 So you have to upgrade to at least hobby version.
 
-You can use the following command to see workder logs:
+You can use the following command to see worker logs:
 
     heroku logs --tail --ps worker
     
-this will print all the logs of the worker just shown below in the screenshot
+this will print all the logs of the worker as shown below in the screenshot
 
 ![enter image description here](https://github.com/shujahm/video-indexing/blob/master/documents/Screenshot1.png?raw=true)
