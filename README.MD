@@ -64,7 +64,7 @@ What this will essentially is migrate copy the file **SampleJob.php** file to yo
 
   
 
-2. Add the following to your **config/queue.php** under **connections** array:
+2. Add the following to your **app/queue.php** under **connections** array:
 
 	```
 	'sqs-fifo' => [
@@ -84,4 +84,24 @@ What this will essentially is migrate copy the file **SampleJob.php** file to yo
 
 ## Heroku Worker Setup
 
-The above setup with Amazon SQS provides us the queue driver we need, we just need to setup queue workers on Heroku to process and use the Amazon SQS through laravel. A very short and precise info is shared on this link: https://dev.to/densityx/setting-up-laravel-queue-worker-on-heroku-4m00
+You need to include the following worker in your Procfile
+
+    worker: php artisan queue:restart && php artisan queue:work --tries=3
+This will restart and put the queue to work whenever your application starts.
+
+## Heroku Worker Configuration
+
+To scale up heroku , and user more than 1 worker,  you have to use the following command:
+
+    heroku ps:scale web=1 worker=5
+In this way 1 Web Dyno and 5 Work Dynos will be deployed. Also please note if you are using Free tier on Heroku running this command will give the following error
+
+> Cannot update to more than 1 Free size dynos per process type.
+
+So you have to upgrade to at least hobby version.
+
+You can use the following command to see workder logs:
+
+    heroku logs --tail --ps worker
+this will print all the logs of the worker just shown below in the screenshot
+![enter image description here](https://github.com/shujahm/video-indexing/blob/master/documents/Screenshot1.png?raw=true)
