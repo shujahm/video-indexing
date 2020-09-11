@@ -4,8 +4,7 @@
 
   
 
-This package is hosted on github only right now, as a public repo
-
+This package is used to add all the required configuration and code to use and process your queues through amazon-sqs easily for laravel application deployed on heroku
   
 
 ## Installation
